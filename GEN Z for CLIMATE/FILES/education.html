@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education | Gen Z for Climate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 shadow-md sticky top-0 bg-white z-50">
+    <div class="flex items-center space-x-3">
+      <img src="genz-climate-logo-with-elements.png" alt="Gen Z for Climate Logo" class="h-10 w-10 rounded-full" />
+      <h1 class="text-3xl font-bold text-green-700">Gen Z for Climate</h1>
+    </div>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="Home.html" class="hover:text-green-700">Home</a></li>
+      <li><a href="projects.html" class="hover:text-green-700">Projects</a></li>
+      <li><a href="education.html" class="hover:text-green-700">Education</a></li>
+      <li><a href="stories.html" class="hover:text-green-700">Stories</a></li>
+      <li><a href="media.html" class="hover:text-green-700">Media</a></li>
+      <li><a href="events.html" class="hover:text-green-700">Events</a></li>
+      <li><a href="contact.html" class="hover:text-green-700">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-green-100 text-center py-12 px-6">
+    <h2 class="text-4xl md:text-5xl font-bold text-green-800">Climate Education Hub</h2>
+    <p class="text-lg mt-4 max-w-2xl mx-auto">
+      Equip yourself with climate knowledge. Learn, act, and inspire others.
+    </p>
+  </header>
+
+  <!-- Educational Content -->
+  <section class="py-12 px-6 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white border-l-4 border-green-600 shadow p-6">
+        <h3 class="text-2xl font-semibold text-green-700">Climate Change 101</h3>
+        <p class="mt-2 text-gray-700">Understand the science behind climate change, global warming, and human impact.</p>
+      </div>
+      <div class="bg-white border-l-4 border-green-600 shadow p-6">
+        <h3 class="text-2xl font-semibold text-green-700">Sustainable Living</h3>
+        <p class="mt-2 text-gray-700">Practical tips and habits to reduce your carbon footprint every day.</p>
+      </div>
+      <div class="bg-white border-l-4 border-green-600 shadow p-6">
+        <h3 class="text-2xl font-semibold text-green-700">Uganda's Climate Reality</h3>
+        <p class="mt-2 text-gray-700">Explore how climate change affects Uganda’s environment, economy, and youth.</p>
+      </div>
+      <div class="bg-white border-l-4 border-green-600 shadow p-6">
+        <h3 class="text-2xl font-semibold text-green-700">Advocacy Tools</h3>
+        <p class="mt-2 text-gray-700">Learn how to mobilize, raise awareness, and influence policy in your community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Surprise Element: Climate Quiz -->
+  <section class="bg-green-50 py-12 px-6 text-center">
+    <h3 class="text-3xl font-bold text-green-800 mb-4">🌍 Quick Climate Quiz!</h3>
+    <p class="mb-6">Test your climate knowledge in under 60 seconds!</p>
+    <div class="inline-block bg-white p-6 rounded-lg shadow-md text-left max-w-md w-full mx-auto">
+      <p class="font-semibold">Q: What greenhouse gas is most commonly associated with global warming?</p>
+      <ul class="mt-4 space-y-2">
+        <li><button onclick="checkAnswer(this, false)" class="bg-gray-100 w-full text-left p-2 rounded hover:bg-green-100">Methane</button></li>
+        <li><button onclick="checkAnswer(this, true)" class="bg-gray-100 w-full text-left p-2 rounded hover:bg-green-100">Carbon Dioxide (CO₂)</button></li>
+        <li><button onclick="checkAnswer(this, false)" class="bg-gray-100 w-full text-left p-2 rounded hover:bg-green-100">Nitrous Oxide</button></li>
+      </ul>
+      <p id="quiz-result" class="mt-4 font-bold text-green-700 hidden"></p>
+    </div>
+    <script>
+      function checkAnswer(btn, correct) {
+        const result = document.getElementById('quiz-result');
+        result.classList.remove('hidden');
+        if (correct) {
+          result.textContent = "✅ Correct! CO₂ is the most common contributor.";
+        } else {
+          result.textContent = "❌ Oops! The correct answer is Carbon Dioxide (CO₂).";
+        }
+      }
+    </script>
+  </section>
+
+</body>
+</html>

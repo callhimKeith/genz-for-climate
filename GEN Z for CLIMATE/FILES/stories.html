@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories | Gen Z for Climate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .slide { display: none; }
+    .active { display: block; animation: fadeIn 1s ease-in-out; }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 shadow-md sticky top-0 bg-white z-50">
+    <div class="flex items-center space-x-3">
+      <img src="genz-climate-logo-with-elements.png" alt="Gen Z for Climate Logo" class="h-10 w-10 rounded-full" />
+      <h1 class="text-3xl font-bold text-green-700">Gen Z for Climate</h1>
+    </div>
+    <ul class="flex space-x-6 text-lg">
+      <li><a href="Home.html" class="hover:text-green-700">Home</a></li>
+      <li><a href="projects.html" class="hover:text-green-700">Projects</a></li>
+      <li><a href="education.html" class="hover:text-green-700">Education</a></li>
+      <li><a href="stories.html" class="hover:text-green-700">Stories</a></li>
+      <li><a href="media.html" class="hover:text-green-700">Media</a></li>
+      <li><a href="events.html" class="hover:text-green-700">Events</a></li>
+      <li><a href="contact.html" class="hover:text-green-700">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-green-100 text-center py-12 px-6">
+    <h2 class="text-4xl md:text-5xl font-bold text-green-800">Youth Voices in Climate Action</h2>
+    <p class="text-lg mt-4 max-w-2xl mx-auto">
+      Real stories from Gen Z leaders making an impact across Uganda and beyond.
+    </p>
+  </header>
+
+  <!-- Stories Section -->
+  <section class="py-12 px-6 max-w-5xl mx-auto">
+    <div class="space-y-8">
+      <article class="bg-white p-6 shadow border-l-4 border-green-600 rounded">
+        <h3 class="text-2xl font-semibold text-green-800">1. Mariam, Kampala</h3>
+        <p class="mt-2 text-gray-700">"Through tree planting in my community, we've created green corridors that cool the city and inspire youth."</p>
+      </article>
+      <article class="bg-white p-6 shadow border-l-4 border-green-600 rounded">
+        <h3 class="text-2xl font-semibold text-green-800">2. Elijah, Gulu</h3>
+        <p class="mt-2 text-gray-700">"I started a school club that teaches kids how to compost and recycle. It's empowering to take action locally."</p>
+      </article>
+      <article class="bg-white p-6 shadow border-l-4 border-green-600 rounded">
+        <h3 class="text-2xl font-semibold text-green-800">3. Sasha, Mbale</h3>
+        <p class="mt-2 text-gray-700">"Our water conservation project is making a difference during dry seasons. Youth have the power to lead!"</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Surprise Element: Testimonial Slider -->
+  <section class="bg-green-50 py-12 px-6 text-center">
+    <h3 class="text-3xl font-bold text-green-800 mb-6">🌟 Voices of Change</h3>
+    <div id="testimonial-container" class="relative max-w-xl mx-auto">
+      <div class="slide active text-lg text-gray-800 italic">"Joining Gen Z for Climate gave me purpose and a platform. Together, we're louder." – Brian</div>
+      <div class="slide text-lg text-gray-800 italic">"I used to feel helpless. Now I lead cleanup drives in my town." – Rebecca</div>
+      <div class="slide text-lg text-gray-800 italic">"Climate justice starts with us. And we’re not backing down." – Abdul</div>
+    </div>
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }, 4000);
+    </script>
+  </section>
+
+</body>
+</html>
